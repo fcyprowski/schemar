@@ -86,7 +86,11 @@ isThisDFOk = function(schema) {
 #' 
 #' @importFrom purrr map
 getSchema = function(df) {
-  map(df, ~class(.))
+  map(df, ~class(.))  %>% 
+    jsonlite::toJSON(auto_unbox = TRUE, pretty = TRUE) %>% 
+    gsub("\\{", "(", .) %>% 
+    gsub("\\}", "\\)", .) %>% 
+    gsub(":", " =", .)
 }
 
 # schemas -----------------------------------------------------------------
