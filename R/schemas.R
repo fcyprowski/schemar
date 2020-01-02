@@ -70,6 +70,14 @@ isThisDFOk = function(schema) {
     )
   }
 }
+# NOTE(@fcyprowski): DOCS required
+doesHaveCorrectUniqueValues = function(correct_obs) {
+  function(column) {
+    intersect(column,
+              correct_obs) %>%
+      length() == length(correct_obs)
+  }
+}
 #' @title get schema from data.frame
 #' @description it's only for help purpose. You still need to convert the result
 #' to "list" function call and you would probably do it by hand :(
