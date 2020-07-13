@@ -1,6 +1,6 @@
 Package: schemer
 Title: Control the correctness of a data.frame/tibble structure 
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: person("Filip", "Cyprowski", email = "filip.cyprowski@example.com", role = c("aut", "cre"))
 Description: Provides functions for checking the correctness of a data.frame/tibble (since it depends on tidyverse) in your data pipelines based on your defined conditions.
 Depends: R (>= 3.5.1)
