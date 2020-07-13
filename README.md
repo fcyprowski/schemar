@@ -1,2 +1,4 @@
-# schemar
-Package for controlling the data.frame schema in data pipelines
+# schemer
+Package for controlling the data.frame schemas in data pipelines
+
+---- TODO
