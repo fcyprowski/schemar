@@ -60,7 +60,7 @@ isThisDFOk = function(schema) {
   )
   function(df) {
     assertthat::assert_that(
-      is.data.frame(df),
+      # is.data.frame(df),  # TODO: let's control that with a param maybe?
       length(df) == length(schema),
       assertthat::has_name(
         df,
